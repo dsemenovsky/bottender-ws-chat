@@ -45,6 +45,7 @@ export default class App extends Component {
   }
 
   openChat () {
+    this.socket.emit('chat message', { '/start', location: window.location.href });
     this.setState({ visible: true })
   }
 
